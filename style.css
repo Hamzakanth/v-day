@@ -204,3 +204,74 @@ h1 {
     width: 260px;
     height: 260px;
 }
+.cute-character{
+    position: relative;
+    margin: 30px auto;
+    width: 150px;
+    height: 150px;
+    animation: float 2s ease-in-out infinite;
+}
+
+.face{
+    width: 150px;
+    height: 150px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.eyes{
+    position:absolute;
+    top:45px;
+    left:40px;
+    width:70px;
+    height:20px;
+    background:
+        radial-gradient(circle,#000 8px,transparent 9px) left,
+        radial-gradient(circle,#000 8px,transparent 9px) right;
+    background-size:50% 100%;
+    background-repeat:no-repeat;
+}
+
+.smile{
+    position:absolute;
+    bottom:35px;
+    left:50%;
+    transform:translateX(-50%);
+    width:60px;
+    height:30px;
+    border-bottom:4px solid #000;
+    border-radius:0 0 60px 60px;
+}
+
+.blush{
+    position:absolute;
+    top:80px;
+    width:20px;
+    height:10px;
+    background:pink;
+    border-radius:50%;
+}
+
+.left{ left:25px; }
+.right{ right:25px; }
+
+.heart{
+    position:absolute;
+    top:-25px;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:30px;
+    animation: heartbeat 1.2s infinite;
+}
+
+@keyframes float{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-10px); }
+}
+
+@keyframes heartbeat{
+    0%,100%{ transform:translateX(-50%) scale(1); }
+    50%{ transform:translateX(-50%) scale(1.3); }
+}
